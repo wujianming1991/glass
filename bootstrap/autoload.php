@@ -15,3 +15,9 @@ define('LARAVEL_START', microtime(true));
 */
 
 require __DIR__.'/../vendor/autoload.php';
+
+// 加载自定义函数库
+$commonFunction = __DIR__.'/../app/Function/common.php';
+if (file_exists($commonFunction)) {
+    require $commonFunction;
+}
